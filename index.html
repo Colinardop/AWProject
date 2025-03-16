@@ -40,8 +40,6 @@
             font-style: italic;
             color: #555;
         }
-
-        /* Recuadro de "Iniciar sesión" */
         .login-box {
             position: fixed;
             top: 20px;
@@ -50,7 +48,7 @@
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
-            z-index: 101; /* Aseguramos que esté sobre el título */
+            z-index: 101;
         }
 
         .login-box a {
@@ -61,31 +59,6 @@
 
         .login-box a:hover {
             text-decoration: underline;
-        }
-
-        /* Barra de navegación */
-        nav {
-            position: fixed;
-            top: 100px;
-            left: 0;
-            width: 100%;
-            background-color: #4b0082;
-            padding: 10px 0;
-            text-align: center;
-            z-index: 90;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 10px 20px;
-            margin: 0 10px;
-        }
-
-        nav a:hover {
-            background-color: #3a0066;
-            border-radius: 5px;
         }
 
         .content {
@@ -127,24 +100,15 @@
         }
     </style>
 </head>
-<body>
-    <!-- Recuadro de "Iniciar sesión" arriba a la izquierda -->
+<body> 
     <div class="login-box">
         <a href="index3.html">Iniciar Sesión</a>
     </div>
 
-    <!-- Título fijo -->
     <div class="header">
         <div class="title">EL INFORMAL</div>
         <div class="subtitle">Noticias sin censura, con un toque diferente</div>
     </div>
-
-    <!-- Barra de navegación -->
-    <nav>
-        <a href="#var">El VAR en el fútbol</a>
-        <a href="#uso">Primer uso y sensaciones</a>
-        <a href="#opinion">VAR, ¿sí o no?</a>
-    </nav>
 
     <div class="content">
         <section id="var">
