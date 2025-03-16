@@ -14,14 +14,19 @@
             padding: 20px;
             position: relative;
         }
+
         .header {
             background: white;
             padding: 20px;
             border-bottom: 5px solid #4b0082;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            display: inline-block;
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
+            z-index: 100;
         }
+
         .title {
             font-size: 60px;
             font-weight: bold;
@@ -29,11 +34,13 @@
             letter-spacing: 3px;
             color: #4b0082;
         }
+
         .subtitle {
             font-size: 18px;
             font-style: italic;
             color: #555;
         }
+
         .login-box {
             position: absolute;
             top: 20px;
@@ -43,14 +50,46 @@
             padding: 10px 20px;
             border-radius: 5px;
         }
+
         .login-box a {
             color: white;
             text-decoration: none;
             font-weight: bold;
         }
+
         .login-box a:hover {
             text-decoration: underline;
         }
+
+        /* Barra de navegación */
+        nav {
+            position: fixed;
+            top: 100px;
+            left: 0;
+            width: 100%;
+            background-color: #4b0082;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 90;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background-color: #3a0066;
+            border-radius: 5px;
+        }
+
+        .content {
+            margin-top: 150px;
+        }
+
         .form-container {
             background: white;
             padding: 20px;
@@ -60,11 +99,13 @@
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
+
         .form-container label {
             font-weight: bold;
             display: block;
             margin-top: 10px;
         }
+
         .form-container input {
             width: 100%;
             padding: 8px;
@@ -72,6 +113,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
         .form-container input[type="submit"] {
             background: #4b0082;
             color: white;
@@ -87,35 +129,42 @@
     <div class="login-box">
         <a href="index3.html">Iniciar Sesión</a>
     </div>
-    
+
     <div class="header">
         <div class="title">EL INFORMAL</div>
         <div class="subtitle">Noticias sin censura, con un toque diferente</div>
     </div>
-    
-    <h1>El VAR en el fútbol</h1>
-    <h2>¿Arregla algo o lo rompe?</h2>
-    <p>Desde siempre, el fútbol ha conllevado muchísimos disgustos por errores arbitrales imposibles de corregir con la vista humana. Para hacer más justo el juego, se aprobó en 2016 la tecnología <a href="https://es.wikipedia.org/wiki/%C3%81rbitro_asistente_de_video">VAR o Árbitro Asistente de Video</a>, que estuvo en fase de pruebas durante dos años antes de su implementación completa.</p>
-    
-    <h3>¿Qué es y cómo funciona?</h3>
-    <p>El <abbr title="Video Assistant Referee">VAR</abbr> permite que árbitros asistentes marquen errores arbitrales flagrantes viendo el partido desde fuera. Esto hace que el árbitro pueda revisar la jugada y corregir o confirmar su decisión.</p>
-	<h4>¿Te suena?</h4>
-    <audio controls>
-        <source src="penalty.mp3" type="audio/mp3">
-    </audio>
-    <h3>Primer uso y sensaciones</h3>
-    <p>La primera vez que se usó esta tecnología fue en el Mundial de Clubes a finales de 2016. Su implementación completa llegó en el <a href="parte2.html">Mundial de 2018</a>, donde cambió el resultado de muchos partidos y generó opiniones divididas.</p>
-    
-    <h3>VAR, ¿sí o no?</h3>
-    <p>Para algunos, el VAR ayuda a corregir errores evidentes, pero otros creen que arruina la emoción del fútbol al retrasar las decisiones y generar incertidumbre en los aficionados.</p>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZuW27lbx720" frameborder="0" allowfullscreen>
+    <div class="content">
+        <section id="var">
+            <h1>El VAR en el fútbol</h1>
+            <h2>¿Arregla algo o lo rompe?</h2>
+            <p>Desde siempre, el fútbol ha conllevado muchísimos disgustos por errores arbitrales imposibles de corregir con la vista humana. Para hacer más justo el juego, se aprobó en 2016 la tecnología <a href="https://es.wikipedia.org/wiki/%C3%81rbitro_asistente_de_video">VAR o Árbitro Asistente de Video</a>, que estuvo en fase de pruebas durante dos años antes de su implementación completa.</p>
+        </section>
+        
+        <section id="uso">
+            <h3>¿Qué es y cómo funciona?</h3>
+            <p>El <abbr title="Video Assistant Referee">VAR</abbr> permite que árbitros asistentes marquen errores arbitrales flagrantes viendo el partido desde fuera. Esto hace que el árbitro pueda revisar la jugada y corregir o confirmar su decisión.</p>
+            <h4>¿Te suena?</h4>
+            <audio controls>
+                <source src="penalty.mp3" type="audio/mp3">
+            </audio>
+        </section>
 
-	</iframe>
+        <section id="opinion">
+            <h3>Primer uso y sensaciones</h3>
+            <p>La primera vez que se usó esta tecnología fue en el Mundial de Clubes a finales de 2016. Su implementación completa llegó en el <a href="parte2.html">Mundial de 2018</a>, donde cambió el resultado de muchos partidos y generó opiniones divididas.</p>
 
-	<footer>
-	<p>&copy; 2025 El Informal | Todos los derechos reservados</p>
-</footer>
+            <h3>VAR, ¿sí o no?</h3>
+            <p>Para algunos, el VAR ayuda a corregir errores evidentes, pero otros creen que arruina la emoción del fútbol al retrasar las decisiones y generar incertidumbre en los aficionados.</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZuW27lbx720" frameborder="0" allowfullscreen></iframe>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 El Informal | Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>
 
