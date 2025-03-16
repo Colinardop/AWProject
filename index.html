@@ -41,14 +41,16 @@
             color: #555;
         }
 
+        /* Recuadro de "Iniciar sesión" */
         .login-box {
-            position: absolute;
+            position: fixed;
             top: 20px;
             left: 20px;
             background: #4b0082;
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
+            z-index: 101; /* Aseguramos que esté sobre el título */
         }
 
         .login-box a {
@@ -126,14 +128,23 @@
     </style>
 </head>
 <body>
+    <!-- Recuadro de "Iniciar sesión" arriba a la izquierda -->
     <div class="login-box">
         <a href="index3.html">Iniciar Sesión</a>
     </div>
 
+    <!-- Título fijo -->
     <div class="header">
         <div class="title">EL INFORMAL</div>
         <div class="subtitle">Noticias sin censura, con un toque diferente</div>
     </div>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="#var">El VAR en el fútbol</a>
+        <a href="#uso">Primer uso y sensaciones</a>
+        <a href="#opinion">VAR, ¿sí o no?</a>
+    </nav>
 
     <div class="content">
         <section id="var">
